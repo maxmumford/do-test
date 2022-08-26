@@ -12,6 +12,8 @@ RUN npm install
 
 COPY --chown=node:node . .
 
+RUN npm run build
+
 EXPOSE 8080
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "dist/main.js" ]
